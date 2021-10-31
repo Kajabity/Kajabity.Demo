@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>Simon J. Williams</Authors>
+    <Company>Williams Technologies Limited</Company>
+    <Description>A simple example NuGet library.</Description>
+    <Copyright>Copyright © 2021 Williams Technologies Limited.</Copyright>
+    <PackageLicenseExpression>Apache-2.0+</PackageLicenseExpression>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageIconUrl />
+    <PackageProjectUrl>https://www.kajabity.com/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Kajabity/Kajabity.Demo</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Kajabity Demo</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
