@@ -6,17 +6,35 @@
     <Company>Williams Technologies Limited</Company>
     <Description>A simple example NuGet library.</Description>
     <Copyright>Copyright © 2021 Williams Technologies Limited.</Copyright>
-    <PackageIcon>logo.png</PackageIcon>
-    <PackageIconUrl />
     <PackageProjectUrl>https://www.kajabity.com/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Kajabity/Kajabity.Demo</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Kajabity Demo</PackageTags>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageIconUrl />
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!--<PackageReadmeFile>README.md</PackageReadmeFile>-->
+  </PropertyGroup>
+
+
+  <PropertyGroup>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\LICENSE.txt">
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+    <PackageReference Include="MinVer" Version="2.5.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE.txt">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
@@ -24,10 +42,6 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+    <!--<None Include="README.md" Pack="true" PackagePath=""/>-->
   </ItemGroup>
-
-  <PropertyGroup>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-  </PropertyGroup>
 </Project>
