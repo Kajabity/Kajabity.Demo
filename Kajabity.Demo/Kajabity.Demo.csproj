@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Authors>Simon J. Williams</Authors>
+	  <TargetFrameworks>netstandard2.0;net462;net47;net471;net472;net48;net481;net6.0</TargetFrameworks>
+	  <Authors>Simon J. Williams</Authors>
     <Company>Williams Technologies Limited</Company>
     <Description>A simple example NuGet library.</Description>
     <Copyright>Copyright © 2021 Williams Technologies Limited.</Copyright>
@@ -27,7 +27,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
-    <PackageReference Include="MinVer" Version="2.5.0">
+    <PackageReference Include="MinVer" Version="4.3.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
