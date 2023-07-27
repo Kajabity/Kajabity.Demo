@@ -5,7 +5,7 @@
 	  <Authors>Simon J. Williams</Authors>
     <Company>Williams Technologies Limited</Company>
     <Description>A simple example NuGet library.</Description>
-    <Copyright>Copyright © 2021 Williams Technologies Limited.</Copyright>
+    <Copyright>Copyright © 2021-2023 Williams Technologies Limited.</Copyright>
     <PackageProjectUrl>https://www.kajabity.com/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Kajabity/Kajabity.Demo</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -16,7 +16,7 @@
     <PackageIconUrl />
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <!--<PackageReadmeFile>README.md</PackageReadmeFile>-->
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
 
@@ -42,6 +42,5 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-    <!--<None Include="README.md" Pack="true" PackagePath=""/>-->
   </ItemGroup>
 </Project>
