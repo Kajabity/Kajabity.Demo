@@ -1,5 +1,5 @@
 ##
-## Copyright 2021-22 Williams Technologies Limited.
+## Copyright 2021-23 Williams Technologies Limited.
 ##
 ## Licensed under the Apache License, Version 2.0 (the "License");
 ## you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@
 #      general configuration      # 
 #---------------------------------# 
 
-# tell appveyor to use MSBuild 15.0 or higher
+# Set build image: needs to include MSBuild 15.0 or higher
 image: Visual Studio 2022
  
 # version format 
@@ -58,7 +58,6 @@ nuget:
 # build platform, i.e. x86, x64, Any CPU. This setting is optional. 
 # platform:
 
-# build Configuration, i.e. Debug, Release, etc.
 before_build:
     - cmd: dotnet restore "Kajabity.Demo.sln"
 
@@ -67,9 +66,13 @@ configuration: Release
 
 build:
     publish_nuget: true             # package projects with .nuspec files and push to artifacts 
-    publish_nuget_symbols: true     # generate and publish NuGet symbol packages 
-    include_nuget_references: true  # add -IncludeReferencedProjects option while packaging NuGet artifacts 
- 
+    publish_nuget_symbols: true     # generate and publish NuGet symbol packages
+    include_nuget_references: false # add -IncludeReferencedProjects option while packaging NuGet artifacts
+        # *** Now set to false due to following warning:
+        #   Separate packages per project and P2P references are recommended. More info: https://github.com/dotnet/cli/issues/3959
+        #   Therefore 'Include referenced projects' setting is ignored for .NET Core or .NET Standard projects.
+        #   dotnet
+
 # MSBuild verbosity level - one of quiet|minimal|normal|detailed
     verbosity: normal
 
@@ -79,7 +82,7 @@ build:
 
 # Artifacts picked up by nuget deployment and includes all DLL variants for each .NET version.
 #artifacts:
-#    - path: Kajabity.Tools.Java\bin\$(configuration)\Kajabity.Tools.Java.dll
+#    - path: Kajabity.Demo\bin\$(configuration)\Kajabity.Demo.dll
 
 #---------------------------------# 
 #     deployment configuration    # 
@@ -103,8 +106,8 @@ deploy:
 
     # Deploy to GitHub Releases 
   - provider: GitHub 
-    release: kajabity.tools.csv-v$(appveyor_build_version)
-    description: 'Kajabity.Tools.Java Release v$(appveyor_build_version)'
+    release: $(MinVerVersion)
+    description: 'Kajabity.Demo Release v$(MinVerVersion)'
     auth_token:
         secure: JcFMulBQj5uHDMqqyRApmJbzVa5hj5US8+hZ85ybBgAxLTYhGLxSTckqokhDybA+
     draft: false
