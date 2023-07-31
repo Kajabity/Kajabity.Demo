@@ -32,9 +32,8 @@ image: Visual Studio 2022
 #branches
 
  
-# Do not build on tags (GitHub only)
-# This avoids the infinite build loop as Deploy to GitHub is set to create a tag each time.
-skip_tags: true 
+# Do build on tags (GitHub only)
+skip_tags: false 
 
 #---------------------------------# 
 #    environment configuration    # 
@@ -101,15 +100,17 @@ deploy:
     skip_symbols: true
     artifact: /.*\.nupkg/
     on:
-        #appveyor_repo_tag: true        # deploy on tag push only - removed or won't deploy at all.
+        appveyor_repo_tag: true         # deploy on tag push only - removed or won't deploy at all.
         branch: main                    # release from main branch only
 
     # Deploy to GitHub Releases 
   - provider: GitHub 
-    release: $(MinVerVersion)
-    description: 'Kajabity.Demo Release v$(MinVerVersion)'
+    release: $(APPVEYOR_REPO_TAG_NAME)
+    description: 'Kajabity.Demo Release $(APPVEYOR_REPO_TAG_NAME)'
     auth_token:
         secure: JcFMulBQj5uHDMqqyRApmJbzVa5hj5US8+hZ85ybBgAxLTYhGLxSTckqokhDybA+
     draft: false
     prerelease: false
-    #appveyor_repo_tag: true        # deploy on tag push only
+    on:
+        branch: main                    # release from master branch only
+        APPVEYOR_REPO_TAG: true         # deploy on tag push only
