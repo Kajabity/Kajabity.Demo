@@ -1,24 +1,26 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	  <TargetFrameworks>netstandard2.0;net462;net47;net471;net472;net48;net481;net6.0</TargetFrameworks>
-	  <Authors>Simon J. Williams</Authors>
+	<TargetFrameworks>netstandard2.0;net462;net47;net471;net472;net48;net481;net6.0</TargetFrameworks>
+    <!-- Assembly info properties -->
+
+
+
     <Company>Williams Technologies Limited</Company>
-    <Description>A simple example NuGet library.</Description>
     <Copyright>Copyright © 2021-2023 Williams Technologies Limited.</Copyright>
+    <Authors>Simon J. Williams</Authors>
+    <Description>A simple example NuGet library.</Description>
+
+    <!-- nuget package properties -->
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageProjectUrl>https://www.kajabity.com/</PackageProjectUrl>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageTags>Kajabity Demo</PackageTags>
     <RepositoryUrl>https://github.com/Kajabity/Kajabity.Demo</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>Kajabity Demo</PackageTags>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <PackageIcon>logo.png</PackageIcon>
-    <PackageIconUrl />
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
-
 
   <PropertyGroup>
     <IncludeSymbols>true</IncludeSymbols>
@@ -26,25 +28,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
-    <PackageReference Include="MinVer" Version="4.3.0">
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+    <PackageReference Include="MinVer" Version="5.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="LICENSE.txt">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-    <None Include="logo.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="..\README.md" Pack="true" PackagePath="\"/>
+    <None Include="LICENSE.txt" Pack="true" PackagePath="\" />
+    <None Include="logo.png" Pack="true" PackagePath="\" />
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>

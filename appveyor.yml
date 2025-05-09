@@ -18,28 +18,28 @@
 ## http://www.kajabity.com
 ##
 
-#---------------------------------# 
-#      general configuration      # 
-#---------------------------------# 
+#---------------------------------#
+#      general configuration      #
+#---------------------------------#
 
 # Set build image: needs to include MSBuild 15.0 or higher
 image: Visual Studio 2022
- 
-# version format 
+
+# version format
 #version: {build}
 
 # branches to build
 #branches
 
- 
-# Do build on tags (GitHub only)
-skip_tags: false 
 
-#---------------------------------# 
-#    environment configuration    # 
-#---------------------------------# 
- 
-# scripts that are called at very beginning, before repo cloning 
+# Do build on tags (GitHub only)
+skip_tags: false
+
+#---------------------------------#
+#    environment configuration    #
+#---------------------------------#
+
+# scripts that are called at very beginning, before repo cloning
 init:
 - git config --global core.autocrlf true
 
@@ -50,11 +50,11 @@ nuget:
     disable_publish_on_pr: true     # disable publishing of .nupkg artifacts to
                                     # account/project feeds for pull request builds
 
-#---------------------------------# 
-#       build configuration       # 
-#---------------------------------# 
- 
-# build platform, i.e. x86, x64, Any CPU. This setting is optional. 
+#---------------------------------#
+#       build configuration       #
+#---------------------------------#
+
+# build platform, i.e. x86, x64, Any CPU. This setting is optional.
 # platform:
 
 before_build:
@@ -64,7 +64,7 @@ before_build:
 configuration: Release
 
 build:
-    publish_nuget: true             # package projects with .nuspec files and push to artifacts 
+    publish_nuget: true             # package projects with .nuspec files and push to artifacts
     publish_nuget_symbols: true     # generate and publish NuGet symbol packages
     include_nuget_references: false # add -IncludeReferencedProjects option while packaging NuGet artifacts
         # *** Now set to false due to following warning:
@@ -75,20 +75,20 @@ build:
 # MSBuild verbosity level - one of quiet|minimal|normal|detailed
     verbosity: normal
 
-#---------------------------------# 
-#      artifacts configuration    # 
-#---------------------------------# 
+#---------------------------------#
+#      artifacts configuration    #
+#---------------------------------#
 
 # Artifacts picked up by nuget deployment and includes all DLL variants for each .NET version.
 #artifacts:
 #    - path: Kajabity.Demo\bin\$(configuration)\Kajabity.Demo.dll
 
-#---------------------------------# 
-#     deployment configuration    # 
-#---------------------------------# 
+#---------------------------------#
+#     deployment configuration    #
+#---------------------------------#
 
-# providers: Local, FTP, WebDeploy, AzureCS, AzureBlob, S3, NuGet, Environment 
-# provider names are case-sensitive! 
+# providers: Local, FTP, WebDeploy, AzureCS, AzureBlob, S3, NuGet, Environment
+# provider names are case-sensitive!
 
 deploy:
     # Secure tokens created using https://ci.appveyor.com/tools/encrypt
@@ -103,8 +103,8 @@ deploy:
         appveyor_repo_tag: true         # deploy on tag push only - removed or won't deploy at all.
         branch: main                    # release from main branch only
 
-    # Deploy to GitHub Releases 
-  - provider: GitHub 
+    # Deploy to GitHub Releases
+  - provider: GitHub
     release: $(APPVEYOR_REPO_TAG_NAME)
     description: 'Kajabity.Demo Release $(APPVEYOR_REPO_TAG_NAME)'
     auth_token:
