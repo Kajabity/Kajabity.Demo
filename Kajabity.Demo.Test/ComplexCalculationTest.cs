@@ -8,7 +8,7 @@ namespace Kajabity.Demo.Test
         public void Test1()
         {
             var cut = new ComplexCalculation();
-            Assert.AreEqual(18, cut.TimesTwo(9));
+            Assert.That(cut.TimesTwo(9), Is.EqualTo(18), "TimesTwo gave wrong result.");
         }
     }
 }
