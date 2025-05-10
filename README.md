@@ -9,7 +9,7 @@ publish a NuGet package.
 
 There are full details in the associated article at [kajabity.com](https://www.kajabity.com/).
 
-This is avery simple package and has no special requirements to use it.
+This is a basic package and has no special requirements to use it.
 
 The package provides a single class with one method that doubles any integer
 passed into it.
