@@ -29,3 +29,18 @@ To offer feedback or ask questions either comment on the article or raise an
 issue on GitHub.
 
 I also welcome contributions if you notice anything that could be improved.
+
+Development
+-----------
+
+Run gitleaks using Docker:
+
+```shell
+docker run -v ${pwd}:/path ghcr.io/gitleaks/gitleaks:latest detect --source /path -v
+```
+
+Run all the pre-commit hooks:
+
+```shell
+pre-commit run --all-files
+```
