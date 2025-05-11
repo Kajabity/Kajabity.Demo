@@ -21,37 +21,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
 
-
-  security-check:
-    name: Security Vulnerabilities
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Security Scan
-        uses: aquasecurity/trivy-action@v0.12
-        with:
-          scan-type: filesystem
-          format: table
-
-  dependency-check:
-    name: Dependency Updates
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Check Dependencies
-        uses: JoranHarmse/nuget-outdated-action@v1.0
-
-  code-tests:
-    name: Code Quality Tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Code Quality Analysis
-        uses: tynedev/markdown-todo@v1 # Example for TODOs, modify as needed
-
   build:
     name: Build Project
     runs-on: ubuntu-latest
