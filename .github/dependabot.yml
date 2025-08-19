@@ -1,9 +1,15 @@
+# .github/dependabot.yml
 version: 2
 updates:
-  - package-ecosystem: "nuget"
-    directory: "/" # or wherever your .csproj/.sln file is
+  # Keep GitHub Actions up to date
+  - package-ecosystem: "github-actions"
+    directory: "/" # Location of workflow files
     schedule:
-      interval: "weekly" # or "daily", "monthly"
+      interval: "weekly"
+
+  # Keep NuGet dependencies up to date
+  - package-ecosystem: "nuget"
+    directory: "/" # Location of solution file
+    schedule:
+      interval: "weekly"
     open-pull-requests-limit: 5
-    commit-message:
-      prefix: "deps"
