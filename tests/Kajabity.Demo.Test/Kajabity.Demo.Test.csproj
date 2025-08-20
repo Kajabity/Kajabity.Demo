@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Kajabity.Demo\Kajabity.Demo.csproj" />
+    <ProjectReference Include="..\..\src\Kajabity.Demo\Kajabity.Demo.csproj" />
   </ItemGroup>
 
 </Project>
