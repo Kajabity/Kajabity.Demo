@@ -1,6 +1,13 @@
 ﻿Kajabity.Demo
 =============
 
+[![CI](https://github.com/kajabity/Kajabity.Demo/actions/workflows/ci.yml/badge.svg)](https://github.com/kajabity/Kajabity.Demo/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/kajabity/Kajabity.Demo/actions/workflows/codeql.yml/badge.svg)](https://github.com/kajabity/Kajabity.Demo/actions/workflows/codeql.yml)
+[![NuGet](https://img.shields.io/nuget/v/Kajabity.Demo.svg)](https://www.nuget.org/packages/Kajabity.Demo/)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/Kajabity.Demo.svg)](https://www.nuget.org/packages/Kajabity.Demo/)
+[![GitHub Release](https://img.shields.io/github/v/release/kajabity/Kajabity.Demo.svg)](https://github.com/kajabity/Kajabity.Demo/releases)
+[![License](https://img.shields.io/github/license/kajabity/Kajabity.Demo.svg)](https://github.com/kajabity/Kajabity.Demo/blob/main/LICENSE)
+
 About
 -----
 
@@ -29,6 +36,12 @@ To offer feedback or ask questions either comment on the article or raise an
 issue on GitHub.
 
 I also welcome contributions if you notice anything that could be improved.
+
+Releases
+--------
+
+- **Latest GitHub Release:** [View on GitHub](https://github.com/kajabity/Kajabity.Demo/releases/latest)
+- **Latest NuGet Package:** [View on NuGet.org](https://www.nuget.org/packages/Kajabity.Demo/)
 
 Development
 -----------
