@@ -8,6 +8,9 @@
     pull_request:
       branches: [ "**" ]    # run on any branch PR
 
+  permissions:
+    contents: read
+
   jobs:
     build:
       name: Build & Test
