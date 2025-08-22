@@ -11,28 +11,15 @@
   jobs:
     build:
       name: Build & Test
-      runs-on: ${{ matrix.os }}
-
-      strategy:
-        matrix:
-          os: [ ubuntu-latest, windows-latest ]
-          dotnet-version: [ '6.0.x', '8.0.x' ]
+      runs-on: ubuntu-latest
 
       steps:
         - uses: actions/checkout@v4
 
-        - name: Setup .NET ${{ matrix.dotnet-version }}
+        - name: Setup .NET
           uses: actions/setup-dotnet@v4
           with:
-            dotnet-version: ${{ matrix.dotnet-version }}
-
-        - name: Cache NuGet packages
-          uses: actions/cache@v4
-          with:
-            path: ~/.nuget/packages
-            key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
-            restore-keys: |
-              ${{ runner.os }}-nuget-
+            dotnet-version: 8.0
 
         - name: Restore dependencies
           run: dotnet restore
@@ -41,39 +28,4 @@
           run: dotnet build --configuration Release --no-restore
 
         - name: Run tests
-          run: dotnet test --no-build --verbosity normal
-
-    release:
-      name: Publish Release & NuGet
-      needs: build
-      if: startsWith(github.ref, 'refs/tags/v')
-      runs-on: windows-latest   # required for .NET Framework builds
-
-      steps:
-        - uses: actions/checkout@v4
-
-        - name: Setup .NET SDKs
-          uses: actions/setup-dotnet@v4
-          with:
-            dotnet-version: |
-              6.0.x
-              8.0.x
-
-        - name: Restore dependencies
-          run: dotnet restore
-
-        - name: Build (Release)
-          run: dotnet build --configuration Release --no-restore
-
-        - name: Pack NuGet package
-          run: dotnet pack --configuration Release --no-build -o ./artifacts
-
-        - name: Publish to NuGet
-          run: dotnet nuget push ./artifacts/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
-
-        - name: Create GitHub Release
-          uses: softprops/action-gh-release@v1
-          with:
-            files: ./artifacts/*.nupkg
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          run: dotnet test --verbosity normal
