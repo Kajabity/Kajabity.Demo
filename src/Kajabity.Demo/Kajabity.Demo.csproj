@@ -1,11 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<TargetFrameworks>netstandard2.0;net462;net47;net471;net472;net48;net481;net6.0</TargetFrameworks>
+	<TargetFrameworks>netstandard2.0;net6.0;net8.0</TargetFrameworks>
+
     <!-- Assembly info properties -->
-
-
-
     <Company>Williams Technologies Limited</Company>
     <Copyright>Copyright © 2021-2023 Williams Technologies Limited.</Copyright>
     <Authors>Simon J. Williams</Authors>
@@ -38,6 +36,6 @@
   <ItemGroup>
     <None Include="LICENSE.txt" Pack="true" PackagePath="\" />
     <None Include="logo.png" Pack="true" PackagePath="\" />
-    <None Include="..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>
