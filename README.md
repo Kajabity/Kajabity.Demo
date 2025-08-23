@@ -8,7 +8,7 @@
 [![NuGet](https://img.shields.io/nuget/v/Kajabity.Demo.svg)](https://www.nuget.org/packages/Kajabity.Demo/)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/Kajabity.Demo.svg)](https://www.nuget.org/packages/Kajabity.Demo/)
 [![GitHub Release](https://img.shields.io/github/v/release/kajabity/Kajabity.Demo.svg)](https://github.com/kajabity/Kajabity.Demo/releases)
-[![License](https://img.shields.io/github/license/kajabity/Kajabity.Demo.svg)](https://github.com/kajabity/Kajabity.Demo/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/kajabity/Kajabity.Demo.svg)](https://github.com/kajabity/Kajabity.Demo/blob/main/LICENSE.txt)
 
 Overview
 --------
