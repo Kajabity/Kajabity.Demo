@@ -1,9 +1,7 @@
-﻿<p align="center">
-  <img src="kajabity.demo.logo.png" alt="Kajabity.Demo logo" width="128"/>
-</p>
-
-Kajabity.Demo
+﻿Kajabity.Demo
 =============
+
+![Kajabity.Demo logo](kajabity.demo.logo.png)
 
 [![CI](https://github.com/kajabity/Kajabity.Demo/actions/workflows/ci.yml/badge.svg)](https://github.com/kajabity/Kajabity.Demo/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/kajabity/Kajabity.Demo/actions/workflows/codeql.yml/badge.svg)](https://github.com/kajabity/Kajabity.Demo/actions/workflows/codeql.yml)
@@ -14,8 +12,10 @@ Kajabity.Demo
 
 Overview
 --------
-Kajabity.Demo is a simple example NuGet package produced for an article on how to create and publish a NuGet package. It
-demonstrates a minimal library and test setup, suitable as a starting point or template.
+
+Kajabity.Demo is a simple example NuGet package produced for an article on how to create and
+publish a NuGet package. It demonstrates a minimal library and test setup, suitable as a starting
+point or template.
 
 Features
 --------
@@ -26,6 +26,7 @@ Features
 
 Installation
 ------------
+
 Install the package from NuGet with:
 
 ```shell
@@ -34,6 +35,7 @@ dotnet add package Kajabity.Demo
 
 Usage
 -----
+
 Here is a basic example of how to use the library once included in a project:
 
 ```csharp
@@ -45,11 +47,13 @@ int value = cc.TimesTwo(9);
 
 Releases
 --------
+
 - **Latest GitHub Release:** [View on GitHub](https://github.com/kajabity/Kajabity.Demo/releases/latest)
 - **Latest NuGet Package:** [View on NuGet.org](https://www.nuget.org/packages/Kajabity.Demo/)
 
 Feedback & Contributions
 -------------------------
+
 To offer feedback or ask questions, either comment on the associated article
 at [kajabity.com](https://www.kajabity.com/) or raise an issue on GitHub.
 
@@ -59,6 +63,7 @@ Development Notes
 -----------------
 
 ### Pre-commit and Security Tools
+
 Run gitleaks using Docker:
 
 ```shell
@@ -70,4 +75,3 @@ Run all the pre-commit hooks:
 ```shell
 pre-commit run --all-files
 ```
-
