@@ -5,14 +5,14 @@
 
     <!-- Assembly info properties -->
     <Company>Williams Technologies Limited</Company>
-    <Copyright>Copyright © 2021-2023 Williams Technologies Limited.</Copyright>
+    <Copyright>Copyright © 2021-2025 Williams Technologies Limited.</Copyright>
     <Authors>Simon J. Williams</Authors>
     <Description>A simple example NuGet library.</Description>
 
     <!-- nuget package properties -->
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <PackageProjectUrl>https://www.kajabity.com/</PackageProjectUrl>
-    <PackageIcon>logo.png</PackageIcon>
+    <PackageProjectUrl>kajabity.com/kajabity-demo-a-step-by-step-guide-to-creating-and-deploying-nuget-packages/</PackageProjectUrl>
+    <PackageIcon>kajabity.demo.logo.png</PackageIcon>
     <PackageTags>Kajabity Demo</PackageTags>
     <RepositoryUrl>https://github.com/Kajabity/Kajabity.Demo</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -34,8 +34,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="LICENSE.txt" Pack="true" PackagePath="\" />
-    <None Include="logo.png" Pack="true" PackagePath="\" />
+    <None Include="..\..\LICENSE.txt" Pack="true" PackagePath="\" />
+    <None Include="..\..\kajabity.demo.logo.png" Pack="true" PackagePath="\" />
     <None Include="..\..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>

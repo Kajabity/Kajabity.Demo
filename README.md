@@ -1,6 +1,8 @@
 ﻿Kajabity.Demo
 =============
 
+![Kajabity.Demo logo](kajabity.demo.logo.png)
+
 [![CI](https://github.com/kajabity/Kajabity.Demo/actions/workflows/ci.yml/badge.svg)](https://github.com/kajabity/Kajabity.Demo/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/kajabity/Kajabity.Demo/actions/workflows/codeql.yml/badge.svg)](https://github.com/kajabity/Kajabity.Demo/actions/workflows/codeql.yml)
 [![NuGet](https://img.shields.io/nuget/v/Kajabity.Demo.svg)](https://www.nuget.org/packages/Kajabity.Demo/)
@@ -8,34 +10,40 @@
 [![GitHub Release](https://img.shields.io/github/v/release/kajabity/Kajabity.Demo.svg)](https://github.com/kajabity/Kajabity.Demo/releases)
 [![License](https://img.shields.io/github/license/kajabity/Kajabity.Demo.svg)](https://github.com/kajabity/Kajabity.Demo/blob/main/LICENSE)
 
-About
------
+Overview
+--------
 
-Kajabity.Demo NuGet as an example produced for an article on how to create and
-publish a NuGet package.
+Kajabity.Demo is a simple example NuGet package produced for an article on how to create and
+publish a NuGet package. It demonstrates a minimal library and test setup, suitable as a starting
+point or template.
 
-There are full details in the associated article at [kajabity.com](https://www.kajabity.com/).
+Features
+--------
 
-This is a basic package and has no special requirements to use it.
+- Simple demo class with a method to double an integer.
+- Multi-targeted builds for modern .NET and .NET Standard.
+- Provides a template for build, test, package and key maintenance actions in GitHub.
 
-The package provides a single class with one method that doubles any integer
-passed into it.
+Installation
+------------
 
-How To Use
-----------
+Install the package from NuGet with:
 
-Here is an example of how to use it, once the package has been included in a
-project:
-
-```cs
-ComplexCalculation cc = new ComplexCalculation();
-int value = cc.TimesTwo(9));
+```shell
+dotnet add package Kajabity.Demo
 ```
 
-To offer feedback or ask questions either comment on the article or raise an
-issue on GitHub.
+Usage
+-----
 
-I also welcome contributions if you notice anything that could be improved.
+Here is a basic example of how to use the library once included in a project:
+
+```csharp
+using Kajabity.Demo;
+
+ComplexCalculation cc = new ComplexCalculation();
+int value = cc.TimesTwo(9);
+```
 
 Releases
 --------
@@ -43,8 +51,18 @@ Releases
 - **Latest GitHub Release:** [View on GitHub](https://github.com/kajabity/Kajabity.Demo/releases/latest)
 - **Latest NuGet Package:** [View on NuGet.org](https://www.nuget.org/packages/Kajabity.Demo/)
 
-Development
------------
+Feedback & Contributions
+-------------------------
+
+To offer feedback or ask questions, either comment on the associated article
+at [kajabity.com](https://www.kajabity.com/) or raise an issue on GitHub.
+
+Contributions are welcome if you notice anything that could be improved.
+
+Development Notes
+-----------------
+
+### Pre-commit and Security Tools
 
 Run gitleaks using Docker:
 
