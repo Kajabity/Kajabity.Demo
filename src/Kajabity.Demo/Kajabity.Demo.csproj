@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<TargetFrameworks>netstandard2.0;net6.0;net8.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net48;net10.0</TargetFrameworks>
 
     <!-- Assembly info properties -->
     <Company>Williams Technologies Limited</Company>
-    <Copyright>Copyright © 2021-2025 Williams Technologies Limited.</Copyright>
+    <Copyright>Copyright © 2021-2026 Williams Technologies Limited.</Copyright>
     <Authors>Simon J. Williams</Authors>
     <Description>A simple example NuGet library.</Description>
 
@@ -26,7 +26,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.102" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.201" PrivateAssets="All" />
     <PackageReference Include="MinVer" Version="7.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
