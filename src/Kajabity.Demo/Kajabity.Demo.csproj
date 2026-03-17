@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<TargetFrameworks>netstandard2.0;net6.0;net8.0.net9.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net48;net10.0</TargetFrameworks>
 
     <!-- Assembly info properties -->
     <Company>Williams Technologies Limited</Company>
-    <Copyright>Copyright © 2021-2025 Williams Technologies Limited.</Copyright>
+    <Copyright>Copyright © 2021-2026 Williams Technologies Limited.</Copyright>
     <Authors>Simon J. Williams</Authors>
     <Description>A simple example NuGet library.</Description>
 
